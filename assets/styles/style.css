@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+@keyframes face-left {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
+}
+
+@keyframes face-right {
+    0% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+@keyframes change-bg {
+    0% {
+        background: green;
+    }
+
+    100% {
+        background: blue;
+    }
+}
+
+@keyframes change-color {
+    0% {
+        color: green;
+    }
+
+    33% {
+        color: pink;
+    }
+
+    66% {
+        color: blue;
+    }
+
+    100% {
+        color: yellow;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gloria Hallelujah';
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background: url('../img/starsblink.gif')
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: change-bg 1.4s infinite steps(2);
+    color: red;
+}
+
+.title h1 {
+    font-size: 2rem;
+}
+
+.face {
+    width: 200px;
+}
+
+.face-left {
+    animation: face-left infinite 1s steps(2);
+}
+
+.face-right {
+    animation: face-right infinite 1s steps(2);
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -60px;
+    color: red;
+}
+
+nav {
+    margin-top: 50px;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+
+li a {
+    width: 150px;
+    background: yellow;
+    display: block;
+    text-align: center;
+    border-radius: 100px;
+    transform: rotate(-25deg);
+}
+
+li a:hover {
+    background: red;
+    color: yellow;
+    transform: rotate(0);
+}
+
+.hero {
+    padding: 5% 10%;
+    display: flex;
+    gap: 50px;
+}
+
+.hero img {
+    height: 400px;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    animation: change-color infinite 0.3s steps(4);
+}
